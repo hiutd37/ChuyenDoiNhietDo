@@ -34,7 +34,10 @@
                     android:layout_height="wrap_content"
                     android:onClick="xuLyChuyenForm"
                     android:text="°C -> °F"
-                    android:textSize="9pt" />
+                    android:background="#00BCD4"
+                    android:textSize="9pt"
+                    android:layout_marginRight="5px"
+                    />
 
                 <Button
                     android:id="@+id/btnFormDoiFQuaC"
@@ -42,7 +45,9 @@
                     android:layout_height="wrap_content"
                     android:onClick="xuLyChuyenForm"
                     android:text="°F -> °C"
-                    android:textSize="9pt" />
+                    android:background="#00BCD4"
+                    android:textSize="9pt"
+                    android:layout_marginLeft="5px"/>
             </TableRow>
         </TableLayout>
     </LinearLayout>

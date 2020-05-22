@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:text="Chuyển đổi"
             android:onClick="doiNhietDoCF"
-
+            android:background="#FF9800"
             />
     </TableLayout>
 
