@@ -50,15 +50,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void doiNhietDoCF(View view) {
-        edtC1 = findViewById(R.id.edtC);
-        edtF1 = findViewById(R.id.edtF);
+        edtC1 = findViewById(R.id.edtC1);
+        edtF1 = findViewById(R.id.edtF1);
         if (Pattern.matches("(^\\d+$)|(^-\\d+$)", edtC1.getText().toString())){
             double c1 = Double.parseDouble(edtC1.getText().toString());
             double f1 = c1*1.8+32;
             edtF1.setText(Double.toString(f1));
         }
         else {
-            Toast.makeText(this, "Vui lòng nhập số!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Vui lòng nhập gia trị!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             edtC1.setText(Double.toString(c1));
         }
         else {
-            Toast.makeText(this, "Vui lòng nhập số!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Vui lòng nhập giá trị!", Toast.LENGTH_SHORT).show();
         }
     }
 }
