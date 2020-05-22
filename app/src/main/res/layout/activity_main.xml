@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="250px"
+        android:layout_height="250px"
+        android:src="@drawable/anhnhietdo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnFormDoiCquaF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="xuLyChuyenForm"
+                    android:text="°C -> °F"
+                    android:textSize="9pt" />
+
+                <Button
+                    android:id="@+id/btnFormDoiFQuaC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="xuLyChuyenForm"
+                    android:text="°F -> °C"
+                    android:textSize="9pt" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frmContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
