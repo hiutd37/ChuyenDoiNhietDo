@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:orientation="horizontal"
-    tools:context=".MainActivity"
     android:gravity="center"
-    >
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
 
     <TableLayout
         android:layout_width="wrap_content"
@@ -26,6 +25,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="°C " />
         </TableRow>
 
@@ -35,23 +35,21 @@
                 android:id="@+id/edtF1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="9"
                 android:editable="false"
-                 />
+                android:ems="9" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:text="°F" />
         </TableRow>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chuyển đổi"
-            android:onClick="doiNhietDoCF"
             android:background="#FF9800"
-            />
+            android:onClick="doiNhietDoCF"
+            android:text="Chuyển đổi" />
     </TableLayout>
-
 </LinearLayout>
