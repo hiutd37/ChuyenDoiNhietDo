@@ -6,10 +6,14 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.chuyendoinhietdo.Fragment.DoiCquaF;
+import com.example.chuyendoinhietdo.Fragment.DoiFquaC;
 
 import java.util.regex.Pattern;
 
@@ -24,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         intiFragment();
 }
+
+    private void events() {
+
+    }
+
     public void xuLyChuyenForm(View view) {
         FragmentManager fragmentManager = getFragmentManager();
         final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -51,6 +60,24 @@ public class MainActivity extends AppCompatActivity {
     public void doiNhietDoCF(View view) {
         edtC1 = findViewById(R.id.edtC1);
         edtF1 = findViewById(R.id.edtF1);
+
+        edtC1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                edtF1.setText("");
+            }
+        });
+
         if (Pattern.matches("(^\\d+$)|(^-\\d+$)", edtC1.getText().toString())){
             double c1 = Double.parseDouble(edtC1.getText().toString());
             double f1 = c1*1.8+32;
@@ -64,6 +91,24 @@ public class MainActivity extends AppCompatActivity {
     public void doiNhietDoFC(View view) {
         edtC1 = findViewById(R.id.edtC);
         edtF1 = findViewById(R.id.edtF);
+
+        edtF1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                edtC1.setText("");
+            }
+        });
+
         if (Pattern.matches("(^\\d+$)|(^-\\d+$)", edtF1.getText().toString())){
             double f1 = Double.parseDouble(edtF1.getText().toString());
             double c1 = (f1-32)/1.8;

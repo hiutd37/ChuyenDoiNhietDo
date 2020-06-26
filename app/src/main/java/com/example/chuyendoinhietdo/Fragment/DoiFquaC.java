@@ -1,4 +1,4 @@
-package com.example.chuyendoinhietdo;
+package com.example.chuyendoinhietdo.Fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
+
+import com.example.chuyendoinhietdo.R;
 
 public class DoiFquaC extends Fragment {
     @Nullable
